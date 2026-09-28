@@ -6,3 +6,11 @@ body:has(.kiosk-shell){height:100dvh;overflow:hidden}body:has(.kiosk-shell) main
 
 .cash-change{display:grid;gap:4px;margin-top:7px}.cash-change label{font-size:13px}.cash-change input{padding:7px 9px;font-size:16px;height:36px}.change-row{display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:650}.change-row strong{font-size:20px;color:#244b37}
 .tile-photo{flex:1;min-height:0;margin:5px 0;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:9px;background:#f5f2eb}.tile-photo img{width:100%;height:100%;object-fit:contain}.tile-photo span{padding:6px;text-align:center;color:#89928c;font-size:11px}.product-maintenance{display:grid;grid-template-columns:minmax(210px,280px) 1fr;gap:18px;align-items:start}.photo-manager{display:flex;gap:12px;align-items:center}.photo-manager img,.photo-placeholder{width:110px;height:110px;flex:none;border-radius:10px;border:1px solid #ddd;object-fit:contain;background:#f5f2eb}.photo-placeholder{display:grid;place-items:center;color:#7b867f}.photo-actions{display:grid;gap:8px}.photo-picker{display:block;background:#28513d;color:#fff;border-radius:9px;padding:10px 13px;text-align:center;cursor:pointer}.photo-picker input{position:absolute;opacity:0;width:1px;height:1px}.photo-actions small{max-width:190px}@media(max-width:700px){.product-maintenance{grid-template-columns:1fr}.photo-manager{align-items:flex-start}}
+
+/* Give additional variants another column before shrinking their photos. */
+@media (min-width:1000px){
+  .kiosk-products:has(> .cookie-tile:nth-child(10)){grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+.kiosk-products{grid-auto-rows:minmax(205px,1fr)}
+.tile-photo{min-height:72px}
+@media (max-width:760px){.kiosk-products{grid-auto-rows:minmax(205px,auto)}}
