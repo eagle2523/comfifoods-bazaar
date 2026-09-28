@@ -33,3 +33,11 @@ body:has(.kiosk-shell){height:100dvh;overflow:hidden}body:has(.kiosk-shell) main
 .discount-modal input[type=text],.discount-modal input:not([type]){padding:8px}.qualified-count,.qualified-count>div{display:flex;align-items:center;justify-content:space-between;gap:10px}.qualified-count button{padding:5px 12px;font-size:20px}.qualified-list{display:grid;gap:8px}
 .discount-preview{background:#f7f3eb;border-radius:10px;padding:10px}.discount-preview h3{margin:0 0 5px;font-size:15px}.preview-item{border-top:1px solid #ddd7cb;padding:5px 0;font-size:12px}.preview-item>div{display:flex;justify-content:space-between;gap:10px;padding:2px 0}.preview-item span,.preview-item strong{white-space:nowrap}.modal-actions{display:flex;justify-content:flex-end;gap:8px;position:sticky;bottom:-18px;background:#fff;padding:9px 0}
 .archive-order{border-top:1px solid #e2ddd1;padding:4px 0}
+
+/* Keep the event controls on the left while the order summary uses the full height. */
+@media (min-width:761px){
+  .kiosk-shell{position:relative}
+  .kiosk-top{position:absolute;z-index:1;top:0;left:3px;justify-content:flex-start;align-items:center;width:calc((100% - 12px)*.703125);padding:0 0 8px}
+  .kiosk-layout{height:100%}
+  .kiosk-products{margin-top:54px}
+}
