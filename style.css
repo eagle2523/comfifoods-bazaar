@@ -41,3 +41,14 @@ body:has(.kiosk-shell){height:100dvh;overflow:hidden}body:has(.kiosk-shell) main
   .kiosk-layout{height:100%}
   .kiosk-products{margin-top:54px}
 }
+
+/* Maximum-height checkout and a cleaner white product-photo area. */
+.tile-photo{background:#fff}
+@media (min-width:761px){
+  body:has(.kiosk-shell) main{height:calc(100dvh - 113px);padding:0 16px}
+  .kiosk-top{top:6px}
+  .kiosk-products{margin-top:60px;margin-bottom:0}
+  .order-panel{align-self:stretch;border-radius:0 0 13px 13px}
+  .order-panel h2{margin-bottom:2px}
+  .order-line{padding:3px 0}
+}
