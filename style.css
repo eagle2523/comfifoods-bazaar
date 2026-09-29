@@ -44,6 +44,11 @@ body:has(.kiosk-shell){height:100dvh;overflow:hidden}body:has(.kiosk-shell) main
 
 /* Maximum-height checkout and a cleaner white product-photo area. */
 .tile-photo{background:#fff}
+.checkout-actions{display:flex;align-items:stretch;gap:7px;margin-top:5px}
+.checkout-actions .clear-cart{flex:1;min-width:0;margin:0}
+.sp-toggle{display:flex;align-items:center;justify-content:center;gap:5px;flex:none;padding:4px 7px;border:1px solid #d9d3c7;border-radius:8px;cursor:pointer;font-size:13px;white-space:nowrap}
+.sp-toggle input{width:22px;height:22px;margin:0}
+.sp-edit{flex:none;padding:4px 8px;font-size:12px}
 @media (min-width:761px){
   body:has(.kiosk-shell) main{height:calc(100dvh - 113px);padding:0 16px}
   .kiosk-top{top:6px}
