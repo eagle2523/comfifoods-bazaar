@@ -1,9 +1,8 @@
-// v17 refresh repair: refresh program files without touching IndexedDB records.
-const CACHE='comfifoods-bazaar-v17-refresh-1';
+// v18 refresh: refresh program files without touching IndexedDB records.
+const CACHE='comfifoods-bazaar-v18-refresh-1';
 const ASSETS=['./','./index.html','./style.css','./app.js','./manifest.webmanifest','./icon.svg','./Bazaar-App-Installation-Guide.pdf'];
 self.addEventListener('install',event=>event.waitUntil((async()=>{
   const cache=await caches.open(CACHE);
-  // Bypass an older HTTP-cache copy when building the new offline cache.
   await cache.addAll(ASSETS.map(path=>new Request(new URL(path,self.registration.scope),{cache:'reload'})));
   await self.skipWaiting();
 })()));
